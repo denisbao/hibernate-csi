@@ -16,6 +16,7 @@
           <element id="library" level="project" name="org.postgresql:postgresql:9.4.1212.jre7" />
           <element id="library" level="project" name="hsqldb" />
           <element id="library" level="project" name="org.owasp.encoder:encoder-esapi:1.2.1" />
+          <element id="library" level="project" name="postgresql-9.3-1101-jdbc41" />
         </element>
       </element>
     </root>

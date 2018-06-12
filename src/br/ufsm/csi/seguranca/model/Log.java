@@ -12,7 +12,7 @@ public class Log {
 
     private Long id;
     private Class classe;
-    private Long idObjeto;
+    private Long idObjeto; //id do objeto que foi alterado
     private Usuario usuario;
     private Date dataHora;
 

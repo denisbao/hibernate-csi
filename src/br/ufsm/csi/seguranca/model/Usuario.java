@@ -15,6 +15,9 @@ public class Usuario {
     private String login;
     private byte[] senha;
     private Collection<Log> logs;
+    private Collection<Opiniao> opinioes;
+    private boolean admin;
+
 
     @OneToMany(mappedBy = "usuario")
     public Collection<Log> getLogs() {
@@ -23,6 +26,15 @@ public class Usuario {
 
     public void setLogs(Collection<Log> logs) {
         this.logs = logs;
+    }
+
+    @OneToMany(mappedBy = "usuario")
+    public Collection<Opiniao> getOpinioes() {
+        return opinioes;
+    }
+
+    public void setOpinioes(Collection<Opiniao> opinioes) {
+        this.opinioes = opinioes;
     }
 
     @Id
@@ -62,5 +74,14 @@ public class Usuario {
 
     public void setSenha(byte[] senha) {
         this.senha = senha;
+    }
+
+    @Column(name = "ADMIN")
+    public boolean isAdmin() {
+        return admin;
+    }
+
+    public void setAdmin(boolean admin) {
+        this.admin = admin;
     }
 }
