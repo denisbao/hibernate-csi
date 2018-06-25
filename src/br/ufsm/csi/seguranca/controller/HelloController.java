@@ -14,4 +14,29 @@ public class HelloController {
         return "hello";
     }
 
+    @RequestMapping("cadastrar-filme.priv")
+    public String redirectCadastrarFilme(){
+        return "cadastrar-filme";
+//        return "forward:hello.html";
+    }
+
+    @RequestMapping("listar-filmes.priv")
+    public String redirectListarFilme(){
+        return "forward:getLista-filmes.html";
+    }
+
+    @RequestMapping("cadastrar-usuario.admin")
+    public String redirectCadastrarUsuario(){
+        return "cadastrar-usuario";
+    }
+
+    @RequestMapping("getLogin.html")
+    public String redirectLogino(){
+        return "/spring-teste";
+    }
+
+    @RequestMapping("getAdminErro.priv")
+    public String redirectAdminErro() {
+        return "adminErro";
+    }
 }

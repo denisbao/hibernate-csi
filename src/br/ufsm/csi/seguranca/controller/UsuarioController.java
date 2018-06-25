@@ -1,6 +1,7 @@
 package br.ufsm.csi.seguranca.controller;
 
 import br.ufsm.csi.seguranca.dao.HibernateDAO;
+import br.ufsm.csi.seguranca.model.Filme;
 import br.ufsm.csi.seguranca.model.Log;
 import br.ufsm.csi.seguranca.model.Usuario;
 import org.hibernate.Session;
@@ -13,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -32,33 +34,29 @@ public class UsuarioController {
     private HibernateDAO hibernateDAO;
 
     @Transactional
-    @RequestMapping("cria-usuario.html")
-    public String criaUsuario(Usuario usuario, String senhaStr) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    @RequestMapping("cria-usuario.admin")
+    public String criaUsuario(Usuario usuario, String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
-        usuario.setSenha(md.digest(senhaStr.getBytes("ISO-8859-1")));
+        usuario.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         hibernateDAO.criaObjeto(usuario);
         return "usuario";
     }
 
     @Transactional
     @RequestMapping("login.html")
-    public String login(String login, String senha) throws UnsupportedEncodingException, NoSuchAlgorithmException {
-//        Map<String, Object> map = new HashMap<>();
-//        map.put("login", login);
-//        MessageDigest md = MessageDigest.getInstance("SHA-256");
-//        map.put("senha", md.digest(senha.getBytes("ISO-8859-1")));
-//        Collection usuarios = hibernateDAO.listaObjetosEquals(Usuario.class, map);
-//        if (usuarios == null || usuarios.isEmpty()) {
-//            return "acesso-negado";
-//        } else {
-//            return "ok";
-//        }
-        Usuario usuario = hibernateDAO.findUsuarioHQL(login, senha);
-        if (usuario == null) {
+    public String login(String login, String senha, HttpSession session, Model model) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+        Map<String, Object> map = new HashMap<>();
+        map.put("login", login);
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        map.put("senha", md.digest(senha.getBytes("ISO-8859-1")));
+        Collection usuarios = hibernateDAO.listaObjetosEquals(Usuario.class, map);
+        if (usuarios == null || usuarios.isEmpty()) {
             return "acesso-negado";
         } else {
-            return "ok";
+            session.setAttribute("userLoggedIn", usuarios.toArray()[0]);
+            return "forward:getLista-filmes.priv";
         }
+
     }
 
     @Transactional
@@ -78,7 +76,7 @@ public class UsuarioController {
     }
 
     @Transactional
-    @RequestMapping("lista-usuarios.html")
+    @RequestMapping("lista-usuarios.admin")
     public String listaUsuarios(Model model, String nome, String login) {
         Map<String, String> m = new HashMap<>();
         if (nome != null && !nome.isEmpty()) {
@@ -90,5 +88,43 @@ public class UsuarioController {
         model.addAttribute("usuarios", hibernateDAO.listaObjetos(Usuario.class, m, null, null, false));
         return "lista-usuarios";
     }
+
+
+    @Transactional
+    @RequestMapping("remove-usuario.admin")
+    public String removeUsuario(Long id){
+        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
+        return "forward:lista-usuarios.admin";
+    }
+
+    @Transactional
+    @RequestMapping("edita-usuario.admin")
+    public String editaFilme(Model model, Long id){
+        model.addAttribute("usuario", hibernateDAO.carregaObjeto(Usuario.class, id));
+        return "editar-usuario";
+    }
+
+    @Transactional
+    @RequestMapping("updateCadastro-usuario.admin")
+    public String updateUsuario(Usuario user){
+        hibernateDAO.updateObjeto(user);
+        return "forward:lista-usuarios.admin";
+    }
+
+    @Transactional
+    @RequestMapping("logoff.htlm")
+    public String logOff(HttpSession session){
+        session.invalidate();
+        return "/spring-teste";
+    }
+
+    @Transactional
+    @RequestMapping("lista-usuarios-opiniao.priv")
+    public String listaUsuarioOpiniao(Model model, HttpSession session){
+        model.addAttribute("usuario", session.getAttribute("userLoggedIn"));
+        return "listar-usuario-opinioes";
+    }
+
+
 
 }

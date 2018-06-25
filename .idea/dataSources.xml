@@ -7,5 +7,14 @@
       <jdbc-driver>org.hsqldb.jdbcDriver</jdbc-driver>
       <jdbc-url>jdbc:hsqldb:hsql://localhost:9001/</jdbc-url>
     </data-source>
+    <data-source source="LOCAL" name="seguranca@localhost" uuid="1c64fb57-a9e5-4756-baf7-81d4231a4fda">
+      <driver-ref>postgresql</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://localhost:5432/seguranca</jdbc-url>
+      <driver-properties>
+        <property name="ApplicationName" value="DataGrip" />
+      </driver-properties>
+    </data-source>
   </component>
 </project>

@@ -5,5 +5,14 @@
       <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" />
       <introspection-schemas>PUBLIC:PUBLIC</introspection-schemas>
     </data-source>
+    <data-source name="seguranca@localhost" uuid="1c64fb57-a9e5-4756-baf7-81d4231a4fda">
+      <database-info product="PostgreSQL" version="9.3.14" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.2">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>postgres</user-name>
+      <introspection-schemas>seguranca:public</introspection-schemas>
+    </data-source>
   </component>
 </project>

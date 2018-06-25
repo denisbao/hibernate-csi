@@ -35,6 +35,10 @@ public class HibernateDAO {
         sessionFactory.getCurrentSession().remove(o);
     }
 
+    public void updateObjeto(Object o){
+        sessionFactory.getCurrentSession().update(o);
+    }
+
 
 
     public Collection<Object> listaObjetos(Class classe,
@@ -97,5 +101,7 @@ public class HibernateDAO {
         q.setParameter("senha", senhaSHA);
         return (Usuario) q.uniqueResult();
     }
+
+
 
 }

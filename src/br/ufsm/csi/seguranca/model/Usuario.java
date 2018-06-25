@@ -14,10 +14,9 @@ public class Usuario {
     private String nome;
     private String login;
     private byte[] senha;
+    private boolean admin;
     private Collection<Log> logs;
     private Collection<Opiniao> opinioes;
-    private boolean admin;
-
 
     @OneToMany(mappedBy = "usuario")
     public Collection<Log> getLogs() {

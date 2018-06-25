@@ -52,14 +52,4 @@ public class Opiniao {
         this.filme = filme;
     }
 
-//    private Usuario teste;
-//
-//    @ManyToOne(optional = false)
-//    public Usuario getTeste() {
-//        return teste;
-//    }
-//
-//    public void setTeste(Usuario teste) {
-//        this.teste = teste;
-//    }
 }
