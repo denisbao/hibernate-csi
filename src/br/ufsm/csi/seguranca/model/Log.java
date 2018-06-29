@@ -11,10 +11,11 @@ import java.util.Date;
 public class Log {
 
     private Long id;
-    private Class classe;
-    private Long idObjeto; //id do objeto que foi alterado
+    private Class classe;   //classe do objeto que foi alterado
+    private Long idObjeto;  //id do objeto que foi alterado
     private Usuario usuario;
     private Date dataHora;
+    private String tipo;
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "seq_log")
@@ -63,5 +64,14 @@ public class Log {
 
     public void setDataHora(Date dataHora) {
         this.dataHora = dataHora;
+    }
+
+    @Column(name = "TIPO")
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 }

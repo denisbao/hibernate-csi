@@ -9,6 +9,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpSession;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -22,15 +24,42 @@ public class FilmeController {
 
     @Transactional
     @RequestMapping("getCadastro-filme.priv")
-    public String cadastraFilme(Filme filme){
+    public String cadastraFilme(Filme filme, HttpSession session){
         hibernateDAO.criaObjeto(filme);
+
+        //.......................................................................................................... LOG
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, filme.getId(),"cadastro", filme.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+
         return "forward:getLista-filmes.priv";
     }
 
     @Transactional
     @RequestMapping("updateCadastro-filme.priv")
-    public String updateFilme(Filme filme){
+    public String updateFilme(Filme filme, HttpSession session){
         hibernateDAO.updateObjeto(filme);
+
+        //.......................................................................................................... LOG
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, filme.getId(),"edicao", filme.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+
+
         return "forward:getLista-filmes.priv";
     }
 
@@ -44,9 +73,29 @@ public class FilmeController {
 
     @Transactional
     @RequestMapping("remove-filme.priv")
-    public String removeFilme(Long id){
-        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Filme.class, id));
-        return "forward:getLista-filmes.priv";
+    public String removeFilme(Long id, HttpSession session){
+        Filme f = (Filme) hibernateDAO.carregaObjeto(Filme.class, id);
+        if (f.getOpinioes().isEmpty()){
+
+            Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+            Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+            hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Filme.class, id));
+
+            //.......................................................................................................... LOG
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, f.getId(),"remocao", f.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..............................................................................................................
+            return "forward:getLista-filmes.priv";
+        }
+        else{
+            return "remover-filme-fail";
+        }
+
     }
 
     @Transactional

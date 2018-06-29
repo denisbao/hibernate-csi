@@ -1,5 +1,6 @@
 package br.ufsm.csi.seguranca.dao;
 
+import br.ufsm.csi.seguranca.model.Log;
 import br.ufsm.csi.seguranca.model.Usuario;
 import org.hibernate.Criteria;
 import org.hibernate.LockMode;
@@ -9,13 +10,16 @@ import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Map;
 
 /**
@@ -102,6 +106,19 @@ public class HibernateDAO {
         return (Usuario) q.uniqueResult();
     }
 
+    public void criaLog(Usuario usuario,
+                        Long idObjeto,
+                        String tipo,
+                        Class classe,
+                        Date dataHora) throws ClassNotFoundException {
 
+        Log log = new Log();
+        log.setClasse(classe);
+        log.setIdObjeto(idObjeto);
+        log.setDataHora(dataHora);
+        log.setUsuario(usuario);
+        log.setTipo(tipo);
+        criaObjeto(log);
 
+    }
 }

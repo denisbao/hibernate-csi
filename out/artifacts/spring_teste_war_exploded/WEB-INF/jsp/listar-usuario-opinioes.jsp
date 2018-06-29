@@ -6,19 +6,16 @@
     <title>Minhas Opinioes</title>
 </head>
 <body>
-<c:import url="menu.jsp"></c:import>
+    <c:import url="menu.jsp"></c:import>
 
-<table style="width:100%">
-    <tr>
         <c:forEach items="${usuario.opinioes}" var="u">
-        <td>
-            <p style="font-size: 11px">Sua opiniao sobre o filme: ${u.filme.nome}</p>
-                ${u.comentario}
-            <hr>
-        </td>
-    </tr>
-    </c:forEach>
 
-</table>
-</body>
+            <p>Sua opiniao sobre o filme: ${u.filme.nome} - <a href="editar-opiniao.priv?id=${u.id}">Editar</a> - <a href="remove-opiniao.priv?id=${u.id}">Apagar</a> </p>
+            <p style="font-size: 16px"><b>${u.comentario}</b></p>
+            <hr>
+
+        </c:forEach>
+
+
+    </body>
 </html>

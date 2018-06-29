@@ -7,9 +7,9 @@
 </head>
 <body>
 
-    <c:import url="menu.jsp"></c:import>
+<c:import url="menu.jsp"></c:import>
 
-<h2>Você não possui acesso de Administrador!</h2>
+<h2>Usuário Atualizado!</h2>
 
 </body>
 </html>

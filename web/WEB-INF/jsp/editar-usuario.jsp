@@ -10,7 +10,7 @@
 
     <h3>Edição de Usuário</h3>
 
-    <form action="updateCadastro-usuario.priv" method="post">
+    <form action="updateCadastro-usuario.admin" method="post">
 
         Nome: <input type="text" name="nome" value="${usuario.nome}"><br><br>
         Login:<input type="text" name= "login" value="${usuario.login}"><br><br>
@@ -26,7 +26,7 @@
 
 
         <input name="id" type="hidden" value="${usuario.id}"  />
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Atualizar</button>
 
     </form>
     </body>

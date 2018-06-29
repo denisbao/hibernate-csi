@@ -10,11 +10,11 @@
             <%--<td><a href="cadastrar-usuario.admin">Cadastrar Usuario</a></td>--%>
         <%--</c:if>--%>
 
-        <td><a href="cadastrar-usuario.admin">Cadastrar Usuário</a></td>
+        <td><a href="cadastrar-usuario.admin">Cadastrar Usuario</a></td>
         <td><a href="getLista-filmes.priv">Listar Filmes</a></td>
         <td><a href="lista-usuarios.admin">Listar Usuarios</a></td>
         <td><a href="lista-usuarios-opiniao.priv">Minhas Opinioes</a></td>
-        <td><a href="logoff.html">SAIR</a></td>
+        <td><a href="user-logoff.priv">SAIR</a></td>
     </tr>
 </table>
 <br><br><br>

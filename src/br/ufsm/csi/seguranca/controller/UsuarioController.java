@@ -13,8 +13,12 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.ServletException;
+import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
@@ -35,10 +39,22 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("cria-usuario.admin")
-    public String criaUsuario(Usuario usuario, String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+    public String criaUsuario(Usuario usuario, String senha, HttpSession session) throws NoSuchAlgorithmException, UnsupportedEncodingException {
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         usuario.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         hibernateDAO.criaObjeto(usuario);
+
+        //.......................................................................................................... LOG
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, usuario.getId(),"cadastro", usuario.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
         return "usuario";
     }
 
@@ -54,26 +70,24 @@ public class UsuarioController {
             return "acesso-negado";
         } else {
             session.setAttribute("userLoggedIn", usuarios.toArray()[0]);
+
+            //...................................................................................................... LOG
+            Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+            Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, u.getId(),"login", u.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..........................................................................................................
+
             return "forward:getLista-filmes.priv";
         }
 
     }
 
-    @Transactional
-    @RequestMapping("cria-log.priv")
-    public String criaLog(Long idUsuario,
-                          Long idObjeto,
-                          String classe,
-                          @DateTimeFormat(pattern = "dd/MM/yyyy HH:mm") Date dataHora) throws ClassNotFoundException {
-        Usuario usuario = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, idUsuario);
-        Log log = new Log();
-        log.setClasse(Class.forName(classe));
-        log.setIdObjeto(idObjeto);
-        log.setDataHora(dataHora);
-        log.setUsuario(usuario);
-        hibernateDAO.criaObjeto(log);
-        return "log";
-    }
 
     @Transactional
     @RequestMapping("lista-usuarios.admin")
@@ -92,36 +106,85 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("remove-usuario.admin")
-    public String removeUsuario(Long id){
-        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Usuario.class, id));
-        return "forward:lista-usuarios.admin";
+    public String removeUsuario(Long id, HttpSession session){
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, id);
+        if (u.getOpinioes().isEmpty()){
+
+            Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+            Usuario uLogado = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+            hibernateDAO.removeObjeto(u);
+
+            //...................................................................................................... LOG
+
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(uLogado, u.getId(),"remocao", u.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..........................................................................................................
+            return "forward:lista-usuarios.admin";
+        }
+        else{
+            return "remover-usuario-fail";
+        }
     }
 
     @Transactional
     @RequestMapping("edita-usuario.admin")
-    public String editaFilme(Model model, Long id){
+    public String editaUsuario(Model model, Long id){
         model.addAttribute("usuario", hibernateDAO.carregaObjeto(Usuario.class, id));
         return "editar-usuario";
     }
 
     @Transactional
     @RequestMapping("updateCadastro-usuario.admin")
-    public String updateUsuario(Usuario user){
+    public String updateUsuario(Usuario user, String senha) throws NoSuchAlgorithmException, UnsupportedEncodingException {
+        MessageDigest md = MessageDigest.getInstance("SHA-256");
+        user.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         hibernateDAO.updateObjeto(user);
-        return "forward:lista-usuarios.admin";
+
+        //.......................................................................................................... LOG
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(user, user.getId(),"edicao", user.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+
+
+        return "editar-usuario-ok";
     }
 
     @Transactional
-    @RequestMapping("logoff.htlm")
-    public String logOff(HttpSession session){
+    @RequestMapping("user-logoff.priv")
+    public void logOff(HttpSession session, ServletResponse servletResponse)  throws IOException, ServletException {
+
+        //.......................................................................................................... LOG
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, u.getId(),"logoff", u.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+
         session.invalidate();
-        return "/spring-teste";
+        ((HttpServletResponse) servletResponse).sendRedirect("/spring-teste");
     }
 
     @Transactional
     @RequestMapping("lista-usuarios-opiniao.priv")
     public String listaUsuarioOpiniao(Model model, HttpSession session){
-        model.addAttribute("usuario", session.getAttribute("userLoggedIn"));
+        Usuario userSessao = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario userBanco = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, userSessao.getId());
+        model.addAttribute("usuario", userBanco);
+
         return "listar-usuario-opinioes";
     }
 

@@ -2,9 +2,11 @@ package br.ufsm.csi.seguranca.controller;
 
 import br.ufsm.csi.seguranca.dao.HibernateDAO;
 import br.ufsm.csi.seguranca.model.Filme;
+import br.ufsm.csi.seguranca.model.Log;
 import br.ufsm.csi.seguranca.model.Opiniao;
 import br.ufsm.csi.seguranca.model.Usuario;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -14,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 
 @Controller
 public class OpiniaoController {
@@ -25,20 +28,27 @@ public class OpiniaoController {
     @RequestMapping("setOpiniao.priv")
     public String setOpiniao(Opiniao op, Long filmeId, HttpSession session){
 
-        Usuario u = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
         Filme f = (Filme) hibernateDAO.carregaObjeto(Filme.class, filmeId);
-        hibernateDAO.criaObjeto(op);
 
         op.setUsuario(u);
         op.setFilme(f);
-        Collection opinioesF = f.getOpinioes();
-        Collection opinioesU = u.getOpinioes();
 
-        opinioesF.add(op);
-        opinioesU.add(op);
+        hibernateDAO.criaObjeto(op);
 
-        f.setOpinioes(opinioesF);
-        u.setOpinioes(opinioesF);
+        f.getOpinioes().add(op);
+        u.getOpinioes().add(op);
+
+        //.......................................................................................................... LOG
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, op.getId(),"cadastro", op.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
 
         return "forward:getLista-filmes.priv";
 
@@ -50,4 +60,65 @@ public class OpiniaoController {
         model.addAttribute("filme", hibernateDAO.carregaObjeto(Filme.class, id));
         return "cadastrar-opiniao";
     }
+
+    @Transactional
+    @RequestMapping("editar-opiniao.priv")
+    public String editarOpiniao(Model model, Long id){
+        model.addAttribute("opiniao", hibernateDAO.carregaObjeto(Opiniao.class, id));
+        return "editar-opiniao";
+    }
+
+    @Transactional
+    @RequestMapping("update-opiniao.priv")
+    public String updateFilme(Long opiniaoId, String comentario, HttpSession session){
+        Opiniao op = (Opiniao) hibernateDAO.carregaObjeto(Opiniao.class, opiniaoId);
+
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        //........................................................................................ PERMISSÃO PARA EDIÇÃO
+        if (u.getId().equals(op.getUsuario().getId())){
+            op.setComentario(comentario);
+            hibernateDAO.updateObjeto(op);
+        }
+        //..............................................................................................................
+
+        //.......................................................................................................... LOG
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, op.getId(),"edicao", op.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+        return "forward:lista-usuarios-opiniao.priv";
+    }
+
+    @Transactional
+    @RequestMapping("remove-opiniao.priv")
+    public String removeOpiniao(Long id, HttpSession session){
+
+        Opiniao op = (Opiniao) hibernateDAO.carregaObjeto(Opiniao.class, id);
+
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+        hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Opiniao.class, id));
+
+        //.......................................................................................................... LOG
+        try {
+            Date dataHora = new Date();
+            hibernateDAO.criaLog(u, op.getId(),"remocao", op.getClass(),dataHora);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+        //..............................................................................................................
+
+        return "forward:lista-usuarios-opiniao.priv";
+    }
+
 }
+
+
+// verificar que só quem pode fazer algo está fazendo
+// não deixar scapiar os dados vindos do form. (EXAP)

@@ -16,7 +16,7 @@
         Login:<input type="text" type ="text" name="login" ><br><br>
         Senha:<input type="password" type ="password" name="senha" ><br><br>
 
-        <button type="submit">Salvar</button>
+        <button type="submit">Entrar</button>
       </form>
   </body>
 </html>

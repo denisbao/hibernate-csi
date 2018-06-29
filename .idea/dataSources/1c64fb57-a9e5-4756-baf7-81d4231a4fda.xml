@@ -18,8 +18,8 @@
     </database>
     <schema id="6" parent="2" name="public">
       <ObjectId>2200</ObjectId>
-      <IntrospectionTimestamp>2018-06-14.13:49:40.254</IntrospectionTimestamp>
-      <IntrospectionStateNumber>1734</IntrospectionStateNumber>
+      <IntrospectionTimestamp>2018-06-27.11:09:16.457</IntrospectionTimestamp>
+      <IntrospectionStateNumber>1841</IntrospectionStateNumber>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -64,7 +64,7 @@
     </table>
     <table id="17" parent="6" name="log">
       <ObjectId>18186</ObjectId>
-      <StateNumber>1732</StateNumber>
+      <StateNumber>1841</StateNumber>
     </table>
     <table id="18" parent="6" name="opiniao">
       <ObjectId>18191</ObjectId>
@@ -122,18 +122,23 @@
       <DataType>bigint|0</DataType>
       <StateNumber>1724</StateNumber>
     </column>
-    <index id="29" parent="17" name="log_pkey">
+    <column id="29" parent="17" name="tipo">
+      <Position>6</Position>
+      <DataType>varchar(255)|0</DataType>
+      <StateNumber>1841</StateNumber>
+    </column>
+    <index id="30" parent="17" name="log_pkey">
       <ObjectId>18189</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="30" parent="17" name="log_pkey">
+    <key id="31" parent="17" name="log_pkey">
       <ObjectId>18190</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>log_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="31" parent="17" name="fkeomueumqj28g4u26kh6pgnq3h">
+    <foreign-key id="32" parent="17" name="fkeomueumqj28g4u26kh6pgnq3h">
       <ObjectId>18214</ObjectId>
       <ColNames>id_usuario</ColNames>
       <RefTableId>18196</RefTableId>
@@ -142,39 +147,39 @@
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="32" parent="18" name="id">
+    <column id="33" parent="18" name="id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1725</StateNumber>
     </column>
-    <column id="33" parent="18" name="comentario">
+    <column id="34" parent="18" name="comentario">
       <Position>2</Position>
       <DataType>varchar(100)|0</DataType>
       <StateNumber>1725</StateNumber>
     </column>
-    <column id="34" parent="18" name="id_filme">
+    <column id="35" parent="18" name="id_filme">
       <Position>3</Position>
       <DataType>bigint|0</DataType>
       <StateNumber>1725</StateNumber>
     </column>
-    <column id="35" parent="18" name="id_usuario">
+    <column id="36" parent="18" name="id_usuario">
       <Position>4</Position>
       <DataType>bigint|0</DataType>
       <StateNumber>1725</StateNumber>
     </column>
-    <index id="36" parent="18" name="opiniao_pkey">
+    <index id="37" parent="18" name="opiniao_pkey">
       <ObjectId>18194</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="37" parent="18" name="opiniao_pkey">
+    <key id="38" parent="18" name="opiniao_pkey">
       <ObjectId>18195</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>opiniao_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="38" parent="18" name="fkbe5oqyiukh2gm1st8fjcrthov">
+    <foreign-key id="39" parent="18" name="fkbe5oqyiukh2gm1st8fjcrthov">
       <ObjectId>18219</ObjectId>
       <ColNames>id_filme</ColNames>
       <RefTableId>18181</RefTableId>
@@ -183,7 +188,7 @@
       <RefKeyName>filme_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <foreign-key id="39" parent="18" name="fksdjcjwx381r1gbfen5d4du70s">
+    <foreign-key id="40" parent="18" name="fksdjcjwx381r1gbfen5d4du70s">
       <ObjectId>18224</ObjectId>
       <ColNames>id_usuario</ColNames>
       <RefTableId>18196</RefTableId>
@@ -192,49 +197,49 @@
       <RefKeyName>usuario_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
     </foreign-key>
-    <column id="40" parent="19" name="id">
+    <column id="41" parent="19" name="id">
       <Position>1</Position>
       <DataType>bigint|0</DataType>
       <NotNull>1</NotNull>
       <StateNumber>1726</StateNumber>
     </column>
-    <column id="41" parent="19" name="admin">
+    <column id="42" parent="19" name="admin">
       <Position>2</Position>
       <DataType>boolean|0</DataType>
       <StateNumber>1726</StateNumber>
     </column>
-    <column id="42" parent="19" name="login">
+    <column id="43" parent="19" name="login">
       <Position>3</Position>
       <DataType>varchar(100)|0</DataType>
       <StateNumber>1726</StateNumber>
     </column>
-    <column id="43" parent="19" name="nome">
+    <column id="44" parent="19" name="nome">
       <Position>4</Position>
       <DataType>varchar(100)|0</DataType>
       <StateNumber>1726</StateNumber>
     </column>
-    <column id="44" parent="19" name="senha">
+    <column id="45" parent="19" name="senha">
       <Position>5</Position>
       <DataType>bytea|0</DataType>
       <StateNumber>1726</StateNumber>
     </column>
-    <index id="45" parent="19" name="usuario_pkey">
+    <index id="46" parent="19" name="usuario_pkey">
       <ObjectId>18202</ObjectId>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
     </index>
-    <index id="46" parent="19" name="uk_fphwr1jyq6n2kyosqsarim7um">
+    <index id="47" parent="19" name="uk_fphwr1jyq6n2kyosqsarim7um">
       <ObjectId>18204</ObjectId>
       <ColNames>login</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="47" parent="19" name="usuario_pkey">
+    <key id="48" parent="19" name="usuario_pkey">
       <ObjectId>18203</ObjectId>
       <ColNames>id</ColNames>
       <UnderlyingIndexName>usuario_pkey</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <key id="48" parent="19" name="uk_fphwr1jyq6n2kyosqsarim7um">
+    <key id="49" parent="19" name="uk_fphwr1jyq6n2kyosqsarim7um">
       <ObjectId>18205</ObjectId>
       <ColNames>login</ColNames>
       <UnderlyingIndexName>uk_fphwr1jyq6n2kyosqsarim7um</UnderlyingIndexName>
