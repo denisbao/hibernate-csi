@@ -8,6 +8,7 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <title>Filmes</title>
@@ -24,7 +25,7 @@
 
             <c:forEach items="${filmes}" var="f">
                 <tr>
-                    <td> ${f.nome} </td>
+                    <td> <c:out value="${f.nome}"/> </td>
                     <td><a href="edita-filme.priv?id=${f.id}">Editar</a></td>
                     <td><a href="remove-filme.priv?id=${f.id}">Apagar</a></td>
                     <td><a href="opinioes-filme.priv?id=${f.id}">Ver Opinioes</a></td>

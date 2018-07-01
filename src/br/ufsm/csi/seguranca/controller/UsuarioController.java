@@ -4,10 +4,12 @@ import br.ufsm.csi.seguranca.dao.HibernateDAO;
 import br.ufsm.csi.seguranca.model.Filme;
 import br.ufsm.csi.seguranca.model.Log;
 import br.ufsm.csi.seguranca.model.Usuario;
+import com.octo.captcha.module.servlet.image.SimpleImageCaptchaServlet;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.ui.Model;
@@ -18,8 +20,12 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Collection;
@@ -60,19 +66,24 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("login.html")
-    public String login(String login, String senha, HttpSession session, Model model) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+    public String login(String login, String senha, HttpSession session, Model model, String jcaptcha, HttpServletRequest request) throws UnsupportedEncodingException, NoSuchAlgorithmException {
         Map<String, Object> map = new HashMap<>();
         map.put("login", login);
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         map.put("senha", md.digest(senha.getBytes("ISO-8859-1")));
         Collection usuarios = hibernateDAO.listaObjetosEquals(Usuario.class, map);
         if (usuarios == null || usuarios.isEmpty()) {
-            return "acesso-negado";
+            return "../../index";
         } else {
-            session.setAttribute("userLoggedIn", usuarios.toArray()[0]);
+            //.................................................................................. SESSION FIXATION ATTACK
+            session.invalidate();
+            HttpSession sessionFixAttack = request.getSession();
+            sessionFixAttack.setAttribute("userLoggedIn", usuarios.toArray()[0]);
+            sessionFixAttack.setAttribute("userLoggedIn", usuarios.toArray()[0]);
+            //..........................................................................................................
 
             //...................................................................................................... LOG
-            Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+            Usuario uSession = (Usuario) sessionFixAttack.getAttribute("userLoggedIn");
             Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
 
             try {
@@ -82,6 +93,7 @@ public class UsuarioController {
                 e.printStackTrace();
             }
             //..........................................................................................................
+
 
             return "forward:getLista-filmes.priv";
         }
@@ -187,6 +199,9 @@ public class UsuarioController {
 
         return "listar-usuario-opinioes";
     }
+
+
+
 
 
 

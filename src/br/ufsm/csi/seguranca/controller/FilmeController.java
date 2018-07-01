@@ -24,22 +24,30 @@ public class FilmeController {
 
     @Transactional
     @RequestMapping("getCadastro-filme.priv")
-    public String cadastraFilme(Filme filme, HttpSession session){
-        hibernateDAO.criaObjeto(filme);
+    public String cadastraFilme(Filme filme, HttpSession session, String token){
+        //....................................................................................Cross-site request forgery
+        if (token != null){
+            String sessionToken = (String) session.getAttribute("token");
+            if (token.equals(sessionToken)){
 
-        //.......................................................................................................... LOG
-        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
-        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+                hibernateDAO.criaObjeto(filme);
 
-        try {
-            Date dataHora = new Date();
-            hibernateDAO.criaLog(u, filme.getId(),"cadastro", filme.getClass(),dataHora);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+                //.................................................................................................. LOG
+                Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+                Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
+
+                try {
+                    Date dataHora = new Date();
+                    hibernateDAO.criaLog(u, filme.getId(),"cadastro", filme.getClass(),dataHora);
+                } catch (ClassNotFoundException e) {
+                    e.printStackTrace();
+                }
+                //......................................................................................................
+
+                return "forward:getLista-filmes.priv";
+            }
         }
-        //..............................................................................................................
-
-        return "forward:getLista-filmes.priv";
+       return "../../index";
     }
 
     @Transactional

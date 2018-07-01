@@ -7,38 +7,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a35ba38a-86e4-4b04-8bb1-8d315b1dc459" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda/_metadata_/metadata.values.at" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/FilmeController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/FilmeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/HelloController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/HelloController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/OpiniaoController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/OpiniaoController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/UsuarioController.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/controller/UsuarioController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Log.class" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/classes/br/ufsm/csi/seguranca/model/Log.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/FilmeController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/FilmeController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/HelloController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/HelloController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/OpiniaoController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/OpiniaoController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/UsuarioController.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/controller/UsuarioController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Log.class" afterPath="$PROJECT_DIR$/out/production/spring-teste/br/ufsm/csi/seguranca/model/Log.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/1c64fb57-a9e5-4756-baf7-81d4231a4fda.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/spring_teste_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/spring_teste_war_exploded.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/adminErro.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/adminErro.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/editar-usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/lista-usuarios.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/lista-usuarios.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-usuario-opinioes.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/listar-usuario-opinioes.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/menu.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/menu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/usuario.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-filme.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/jsp/cadastrar-filme.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/WEB-INF/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/index.jsp" afterPath="$PROJECT_DIR$/out/artifacts/spring_teste_war_exploded/index.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spring-teste.iml" afterPath="$PROJECT_DIR$/spring-teste.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/dao/HibernateDAO.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/dao/HibernateDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Log.java" afterPath="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/adminErro.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/adminErro.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-usuario-opinioes.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-usuario-opinioes.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/usuario.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp" afterPath="$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -87,39 +78,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UsuarioController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="144" column="40" lean-forward="false" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log" pinned="false" current-in-tab="false">
-        <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.log">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="usuario" pinned="false" current-in-tab="true">
-        <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.usuario">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state>
-              <filtering enabled="true" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilmeController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="87" column="41" lean-forward="false" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
+            <state relative-caret-position="297">
+              <caret line="84" column="86" lean-forward="false" selection-start-line="84" selection-start-column="86" selection-end-line="84" selection-end-column="86" />
               <folding />
             </state>
           </provider>
@@ -160,18 +123,12 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-usuarios.jsp" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java" />
         <option value="$PROJECT_DIR$/src/hibernate.cfg.xml" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/LoginErro.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/AdminErro.jsp" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroAdministrador.java" />
-        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-opiniao.jsp" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Filme.java" />
-        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-opinioes-filme.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-usuario.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/lista-usuarios.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/jsp/menu.jsp" />
@@ -186,8 +143,17 @@
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Log.java" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/dao/HibernateDAO.java" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/LogController.java" />
-        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/login-sucess.jsp" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/Util/Token.java" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java" />
+        <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/Util/Captcha.java" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp" />
+        <option value="$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java" />
       </list>
     </option>
@@ -212,8 +178,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="width" value="1920" />
-    <option name="height" value="1080" />
+    <option name="width" value="1280" />
+    <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -233,6 +199,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,6 +251,13 @@
             <path>
               <item name="Seguranca-Final" type="b2602c69:ProjectViewProjectNode" />
               <item name="Seguranca-Final" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="seguranca" type="462c0819:PsiDirectoryNode" />
+              <item name="Util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Seguranca-Final" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Seguranca-Final" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -302,9 +278,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -319,6 +292,11 @@
     <property name="project.structure.side.proportion" value="0.35977012" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -508,15 +486,16 @@
       <workItem from="1529860970446" duration="20878000" />
       <workItem from="1529941315104" duration="353000" />
       <workItem from="1530030923461" duration="16903000" />
-      <workItem from="1530184341979" duration="10988000" />
+      <workItem from="1530184341979" duration="17112000" />
+      <workItem from="1530470859014" duration="10664000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="88368000" />
+    <option name="totallyTimeSpent" value="105156000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -525,23 +504,23 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32960597" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20713525" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1736672" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48460776" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.48418158" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287483" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19265144" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2255846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20979765" sideWeight="0.4951857" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2092084" sideWeight="0.4951857" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.226979" sideWeight="0.5048143" order="7" side_tool="true" content_ui="tabs" />
@@ -562,45 +541,11 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="65" />
+      <option name="time" value="71" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="48" column="38" lean-forward="true" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Usuario.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="35" column="54" lean-forward="false" selection-start-line="35" selection-start-column="54" selection-end-line="35" selection-end-column="54" />
-          <folding>
-            <element signature="docComment;class#Usuario#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Filme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Opiniao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -656,14 +601,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="21" column="4" lean-forward="false" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/LoginErro.jsp" />
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/hello.jsp">
       <provider selected="true" editor-type-id="text-editor">
@@ -673,25 +610,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.filme">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/model/Filme.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="12" column="40" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="13" lean-forward="true" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -716,33 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="269">
           <caret line="19" column="150" lean-forward="false" selection-start-line="19" selection-start-column="113" selection-end-line="19" selection-end-column="150" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="18" lean-forward="false" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="49" lean-forward="false" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -790,22 +685,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/remover-usuario-fail.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="14" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -867,19 +746,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/LogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="26" column="40" lean-forward="true" selection-start-line="26" selection-start-column="40" selection-end-line="26" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/LogController.java" />
     <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/filtros/FiltroSeguranca.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
           <caret line="24" column="79" lean-forward="true" selection-start-line="24" selection-start-column="66" selection-end-line="24" selection-end-column="79" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -887,14 +758,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="0" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -907,53 +770,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.opiniao">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
+    <entry file="jar://$PROJECT_DIR$/lib/recaptcha4j-0.0.7.jar!/META-INF/maven/net.tanesha.recaptcha4j/recaptcha4j/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-123">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java">
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/login-sucess.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="103" column="90" lean-forward="true" selection-start-line="102" selection-start-column="8" selection-end-line="103" selection-end-column="90" />
+        <state relative-caret-position="180">
+          <caret line="12" column="73" lean-forward="false" selection-start-line="12" selection-start-column="73" selection-end-line="12" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/remover-usuario-fail.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="50" column="5" lean-forward="true" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/HelloController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="15" selection-end-line="39" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/dao/HibernateDAO.java">
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/Util/Token.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="664">
-          <caret line="108" column="40" lean-forward="true" selection-start-line="108" selection-start-column="40" selection-end-line="108" selection-end-column="40" />
-          <folding>
-            <element signature="e#1036#1037#0" expanded="true" />
-            <element signature="e#1094#1095#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/FilmeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="87" column="41" lean-forward="false" selection-start-line="87" selection-start-column="41" selection-end-line="87" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.log">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="144" column="40" lean-forward="false" selection-start-line="144" selection-start-column="40" selection-end-line="144" selection-end-column="40" />
+        <state relative-caret-position="165">
+          <caret line="11" column="22" lean-forward="true" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -965,12 +826,119 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.opiniao">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.log">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/Util/Captcha.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/editar-filme.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="70" lean-forward="false" selection-start-line="0" selection-start-column="70" selection-end-line="0" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="393">
+          <caret line="28" column="22" lean-forward="false" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/dao/HibernateDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/OpiniaoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="95" column="56" lean-forward="false" selection-start-line="95" selection-start-column="56" selection-end-line="95" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-usuario.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="7" lean-forward="true" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/7b2e4bd6/1c64fb57-a9e5-4756-baf7-81d4231a4fda/seguranca.public.filme">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/listar-filmes.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="27" column="57" lean-forward="true" selection-start-line="27" selection-start-column="57" selection-end-line="27" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/jsp/cadastrar-filme.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="84" lean-forward="false" selection-start-line="15" selection-start-column="75" selection-end-line="15" selection-end-column="84" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/br/ufsm/csi/seguranca/controller/UsuarioController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="84" column="86" lean-forward="false" selection-start-line="84" selection-start-column="86" selection-end-line="84" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
-          <artifact-editor />
+          <artifact-editor>
+            <show-content>
+              <type id="library" />
+            </show-content>
+          </artifact-editor>
           <last-edited>spring-teste:war exploded</last-edited>
           <splitter-proportions>
             <option name="proportions">
@@ -1032,7 +1000,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>postgresql-9.3-1101-jdbc41</last-edited>
+          <last-edited>simplecaptcha-1.2.1</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

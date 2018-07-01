@@ -17,6 +17,8 @@
           <element id="library" level="project" name="hsqldb" />
           <element id="library" level="project" name="org.owasp.encoder:encoder-esapi:1.2.1" />
           <element id="library" level="project" name="postgresql-9.3-1101-jdbc41" />
+          <element id="library" level="project" name="recaptcha4j-0.0.7" />
+          <element id="library" level="project" name="simplecaptcha-1.2.1" />
         </element>
       </element>
     </root>

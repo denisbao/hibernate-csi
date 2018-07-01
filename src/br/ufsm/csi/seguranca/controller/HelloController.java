@@ -1,7 +1,10 @@
 package br.ufsm.csi.seguranca.controller;
 
+import br.ufsm.csi.seguranca.Util.Token;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpSession;
 
 /**
  * Created by cpol on 22/05/2017.
@@ -15,9 +18,11 @@ public class HelloController {
     }
 
     @RequestMapping("cadastrar-filme.priv")
-    public String redirectCadastrarFilme(){
+    public String redirectCadastrarFilme(HttpSession session){
+
+        session.setAttribute("token", Token.generateToken());
+
         return "cadastrar-filme";
-//        return "forward:hello.html";
     }
 
     @RequestMapping("listar-filmes.priv")

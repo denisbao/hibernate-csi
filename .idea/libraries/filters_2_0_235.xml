@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="filters-2.0.235">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/filters-2.0.235.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcaptcha-2.0-alpha-1-SNAPSHOT.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcaptcha-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/jcaptcha-integration-simple-servlet-2.0-alpha-1-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
