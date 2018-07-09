@@ -9,7 +9,7 @@
 
 <c:import url="menu.jsp"></c:import>
 
-<h2>Este usuário possui opiniões cadastradas. Você não pode remove-lo.</h2>
+<h2>Este usuário possui opiniões cadastradas ou registros salvos em logs. Você não pode remove-lo.</h2>
 
 </body>
 </html>

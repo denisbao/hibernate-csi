@@ -1,6 +1,3 @@
-<%@ page import="net.tanesha.recaptcha.ReCaptcha" %>
-<%@ page import="net.tanesha.recaptcha.ReCaptchaFactory" %>
-
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -14,9 +11,6 @@
         Login:<input type="text" type ="text" name="login" ><br><br>
         Senha:<input type="password" type ="password" name="senha" ><br><br>
         <p>
-
-
-        <%--<div class="g-recaptcha" data-sitekey="<6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI>"></div>--%>
 
         <div class="g-recaptcha" data-sitekey="6LdAVmEUAAAAAAwL-AXTQQta-cQTqH-OE0j5ksWg"></div>
 

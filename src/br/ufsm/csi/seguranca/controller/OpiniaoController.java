@@ -30,33 +30,47 @@ public class OpiniaoController {
 
         Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
         Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
-
         Filme f = (Filme) hibernateDAO.carregaObjeto(Filme.class, filmeId);
 
-        op.setUsuario(u);
-        op.setFilme(f);
+        //.......................................................................................... HIDDEN MANIPULATION
+        Long selectedFilmeID = (Long) session.getAttribute("selectedFilmeID");
+        if (selectedFilmeID.equals(filmeId)){
+            op.setUsuario(u);
+            op.setFilme(f);
 
-        hibernateDAO.criaObjeto(op);
+            hibernateDAO.criaObjeto(op);
 
-        f.getOpinioes().add(op);
-        u.getOpinioes().add(op);
+            f.getOpinioes().add(op);
+            u.getOpinioes().add(op);
+            //...................................................................................................... LOG
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, op.getId(),"cadastro", op.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..........................................................................................................
 
-        //.......................................................................................................... LOG
-        try {
-            Date dataHora = new Date();
-            hibernateDAO.criaLog(u, op.getId(),"cadastro", op.getClass(),dataHora);
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
+            return "forward:getLista-filmes.priv";
         }
-        //..............................................................................................................
-
-        return "forward:getLista-filmes.priv";
-
+        else{
+            //...................................................................................................... LOG
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, op.getId(),"hiddenManipulation", op.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..........................................................................................................
+            return "hiddenManipulationErro";
+        }
     }
 
     @Transactional
     @RequestMapping(value = "cadastra-opiniao.priv", method = RequestMethod.GET)
-    public String cadastraOpiniao(Model model, Long id){
+    public String cadastraOpiniao(Model model, Long id, HttpSession session){
+
+        session.setAttribute("selectedFilmeID", id);
         model.addAttribute("filme", hibernateDAO.carregaObjeto(Filme.class, id));
         return "cadastrar-opiniao";
     }
@@ -64,48 +78,49 @@ public class OpiniaoController {
     @Transactional
     @RequestMapping("editar-opiniao.priv")
     public String editarOpiniao(Model model, Long id, HttpSession session){
+
         model.addAttribute("opiniao", hibernateDAO.carregaObjeto(Opiniao.class, id));
-        session.setAttribute("sessionIdOp", id);
+        session.setAttribute("selectedOpID", id);
         return "editar-opiniao";
     }
 
     @Transactional
     @RequestMapping("update-opiniao.priv")
-    public String updateFilme(Long opiniaoId, String comentario, HttpSession session){
+    public String updateOpiniao(Long opiniaoId, String comentario, HttpSession session){
+
+        Opiniao op = (Opiniao) hibernateDAO.carregaObjeto(Opiniao.class, opiniaoId);
+        Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
+        Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
 
         //.......................................................................................... HIDDEN MANIPULATION
-        Long sessionIdOp = (Long) session.getAttribute("sessionIdOp");
-        if (sessionIdOp.equals(opiniaoId)){
+        Long selectedOpID = (Long) session.getAttribute("selectedOpID");
+        if (selectedOpID.equals(opiniaoId) && u.getId().equals(op.getUsuario().getId())){
 
-            Opiniao op = (Opiniao) hibernateDAO.carregaObjeto(Opiniao.class, opiniaoId);
+            op.setComentario(comentario);
+            hibernateDAO.updateObjeto(op);
 
-            Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
-            Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
-
-            if (u.getId().equals(op.getUsuario().getId())){
-                op.setComentario(comentario);
-                hibernateDAO.updateObjeto(op);
-
-                //.................................................................................................. LOG
-                try {
-                    Date dataHora = new Date();
-                    hibernateDAO.criaLog(u, op.getId(),"edicao", op.getClass(),dataHora);
-                } catch (ClassNotFoundException e) {
-                    e.printStackTrace();
-                }
-                //......................................................................................................
-
+            //...................................................................................................... LOG
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, op.getId(),"edicao", op.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
             }
-            else{
-                System.out.println("NAO NAO NAO NAO.... QUE FEIO");
-            }
+            //..........................................................................................................
+
         }
         else{
-            System.out.println("NAO NAO NAO NAO.... QUE FEIO");
+            //...................................................................................................... LOG
+            try {
+                Date dataHora = new Date();
+                hibernateDAO.criaLog(u, op.getId(),"hiddenManipulation", op.getClass(),dataHora);
+            } catch (ClassNotFoundException e) {
+                e.printStackTrace();
+            }
+            //..........................................................................................................
+            return "hiddenManipulationErro";
+
         }
-        //..............................................................................................................
-
-
         return "forward:lista-usuarios-opiniao.priv";
     }
 
@@ -113,10 +128,7 @@ public class OpiniaoController {
     @RequestMapping("remove-opiniao.priv")
     public String removeOpiniao(Long id, HttpSession session){
 
-
-
         Opiniao op = (Opiniao) hibernateDAO.carregaObjeto(Opiniao.class, id);
-
         Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
         Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
 
@@ -135,7 +147,3 @@ public class OpiniaoController {
     }
 
 }
-
-
-// verificar que só quem pode fazer algo está fazendo
-// não deixar scapiar os dados vindos do form. (EXAP)

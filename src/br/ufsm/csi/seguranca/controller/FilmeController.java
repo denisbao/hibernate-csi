@@ -14,7 +14,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-
 @Controller
 public class FilmeController {
 
@@ -25,25 +24,23 @@ public class FilmeController {
     @Transactional
     @RequestMapping("getCadastro-filme.priv")
     public String cadastraFilme(Filme filme, HttpSession session, String token){
-        //....................................................................................Cross-site request forgery
+        //................................................................................... CROSS-SITE REQUEST FORGERY
         if (token != null){
+
             String sessionToken = (String) session.getAttribute("token");
+
             if (token.equals(sessionToken)){
 
                 hibernateDAO.criaObjeto(filme);
-
                 //.................................................................................................. LOG
                 Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
                 Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
-
                 try {
                     Date dataHora = new Date();
                     hibernateDAO.criaLog(u, filme.getId(),"cadastro", filme.getClass(),dataHora);
                 } catch (ClassNotFoundException e) {
                     e.printStackTrace();
                 }
-                //......................................................................................................
-
                 return "forward:getLista-filmes.priv";
             }
         }
@@ -67,7 +64,6 @@ public class FilmeController {
         }
         //..............................................................................................................
 
-
         return "forward:getLista-filmes.priv";
     }
 
@@ -90,20 +86,19 @@ public class FilmeController {
 
             hibernateDAO.removeObjeto(hibernateDAO.carregaObjeto(Filme.class, id));
 
-            //.......................................................................................................... LOG
+            //...................................................................................................... LOG
             try {
                 Date dataHora = new Date();
                 hibernateDAO.criaLog(u, f.getId(),"remocao", f.getClass(),dataHora);
             } catch (ClassNotFoundException e) {
                 e.printStackTrace();
             }
-            //..............................................................................................................
+            //..........................................................................................................
             return "forward:getLista-filmes.priv";
         }
         else{
             return "remover-filme-fail";
         }
-
     }
 
     @Transactional

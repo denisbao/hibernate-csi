@@ -35,15 +35,13 @@
     <orderEntry type="library" name="Spring-4.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Spring MVC-4.3.8.RELEASE" level="project" />
     <orderEntry type="library" name="Hibernate 5.2.9-5.2.9" level="project" />
-    <orderEntry type="library" name="javax.servlet:jstl:1.2" level="project" />
     <orderEntry type="library" name="org.apache.commons:commons-dbcp2:2.0" level="project" />
     <orderEntry type="library" name="org.postgresql:postgresql:9.4.1212.jre7" level="project" />
-    <orderEntry type="library" name="hsqldb" level="project" />
     <orderEntry type="library" name="javax.servlet:javax.servlet-api:3.0.1" level="project" />
     <orderEntry type="library" name="org.owasp.encoder:encoder-esapi:1.2.1" level="project" />
     <orderEntry type="library" name="postgresql-9.3-1101-jdbc41" level="project" />
-    <orderEntry type="library" name="recaptcha4j-0.0.7" level="project" />
     <orderEntry type="library" scope="PROVIDED" name="filters-2.0.235" level="project" />
-    <orderEntry type="library" name="simplecaptcha-1.2.1" level="project" />
+    <orderEntry type="library" name="javax.json-1.1.2" level="project" />
+    <orderEntry type="library" name="jstl-1.2" level="project" />
   </component>
 </module>

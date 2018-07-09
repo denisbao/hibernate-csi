@@ -43,8 +43,6 @@ public class HibernateDAO {
         sessionFactory.getCurrentSession().update(o);
     }
 
-
-
     public Collection<Object> listaObjetos(Class classe,
                                            Map<String, String> likeMap,
                                            Integer maxResults,

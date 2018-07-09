@@ -1,5 +1,6 @@
 package br.ufsm.csi.seguranca.controller;
 
+import br.ufsm.csi.seguranca.Util.Captcha;
 import br.ufsm.csi.seguranca.dao.HibernateDAO;
 import br.ufsm.csi.seguranca.model.Filme;
 import br.ufsm.csi.seguranca.model.Log;
@@ -50,10 +51,10 @@ public class UsuarioController {
         usuario.setSenha(md.digest(senha.getBytes("ISO-8859-1")));
         hibernateDAO.criaObjeto(usuario);
 
-        //.......................................................................................................... LOG
         Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
         Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
 
+        //.......................................................................................................... LOG
         try {
             Date dataHora = new Date();
             hibernateDAO.criaLog(u, usuario.getId(),"cadastro", usuario.getClass(),dataHora);
@@ -66,26 +67,29 @@ public class UsuarioController {
 
     @Transactional
     @RequestMapping("login.html")
-    public String login(String login, String senha, HttpSession session, Model model, String jcaptcha, HttpServletRequest request) throws UnsupportedEncodingException, NoSuchAlgorithmException {
+    public String login(String login, String senha, HttpSession session, Model model, HttpServletRequest request) throws IOException, NoSuchAlgorithmException {
         Map<String, Object> map = new HashMap<>();
         map.put("login", login);
         MessageDigest md = MessageDigest.getInstance("SHA-256");
         map.put("senha", md.digest(senha.getBytes("ISO-8859-1")));
         Collection usuarios = hibernateDAO.listaObjetosEquals(Usuario.class, map);
-        if (usuarios == null || usuarios.isEmpty()) {
+
+        //................................................................................................ CAPTCHA CHECK
+
+        String captcha = request.getParameter("g-recaptcha-response");
+        boolean captchaCheck = Captcha.verify(captcha);
+
+        if (usuarios == null || usuarios.isEmpty() || !captchaCheck) {
             return "../../index";
         } else {
             //.................................................................................. SESSION FIXATION ATTACK
             session.invalidate();
             HttpSession sessionFixAttack = request.getSession();
             sessionFixAttack.setAttribute("userLoggedIn", usuarios.toArray()[0]);
-            sessionFixAttack.setAttribute("userLoggedIn", usuarios.toArray()[0]);
-            //..........................................................................................................
 
             //...................................................................................................... LOG
             Usuario uSession = (Usuario) sessionFixAttack.getAttribute("userLoggedIn");
             Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
-
             try {
                 Date dataHora = new Date();
                 hibernateDAO.criaLog(u, u.getId(),"login", u.getClass(),dataHora);
@@ -93,7 +97,6 @@ public class UsuarioController {
                 e.printStackTrace();
             }
             //..........................................................................................................
-
 
             return "forward:getLista-filmes.priv";
         }
@@ -120,15 +123,13 @@ public class UsuarioController {
     @RequestMapping("remove-usuario.admin")
     public String removeUsuario(Long id, HttpSession session){
         Usuario u = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, id);
-        if (u.getOpinioes().isEmpty()){
+        if (u.getOpinioes().isEmpty() && u.getLogs().isEmpty()){
 
             Usuario uSession = (Usuario) session.getAttribute("userLoggedIn");
             Usuario uLogado = (Usuario) hibernateDAO.carregaObjeto(Usuario.class, uSession.getId());
-
             hibernateDAO.removeObjeto(u);
 
             //...................................................................................................... LOG
-
             try {
                 Date dataHora = new Date();
                 hibernateDAO.criaLog(uLogado, u.getId(),"remocao", u.getClass(),dataHora);

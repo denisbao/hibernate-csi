@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpSession;
 
-/**
- * Created by cpol on 22/05/2017.
- */
+
 @Controller
 public class HelloController {
 
@@ -19,9 +17,8 @@ public class HelloController {
 
     @RequestMapping("cadastrar-filme.priv")
     public String redirectCadastrarFilme(HttpSession session){
-
+        //................................................................................... CROSS-SITE REQUEST FORGERY
         session.setAttribute("token", Token.generateToken());
-
         return "cadastrar-filme";
     }
 

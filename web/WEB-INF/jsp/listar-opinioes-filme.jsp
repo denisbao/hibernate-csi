@@ -13,7 +13,7 @@
                 <c:forEach items="${filme.opinioes}" var="f">
                 <td>
                     <p style="font-size: 11px">Opinião dada por: ${f.usuario.nome}</p>
-                    ${f.comentario}
+                    <c:out value="${f.comentario}"/>
                     <hr>
                 </td>
             </tr>
